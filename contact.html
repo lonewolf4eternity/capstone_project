@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume | Contacct</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1, 2);
+        }
+
+        footer {
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="./index.html">Home</a>
+        <a href=""> | </a>
+        <a href="./hobby.html">Hobby</a>
+        <a href=""> | </a>
+        <a href="./contact.html">Contact</a>
+    </header>
+    <h1>Contact</h1>
+    <p>Phone / WA : +6282173761982</p>
+    <p>e-mail : amalrahmanduya@gmail.com</p>
+    <hr>
+    <footer>
+        <p id="copyright"></p>
+        <div class="social-icons">
+            <a href="https://web.facebook.com/revardy.d.caesar/" target="_blank"><img src="./facebook.png" alt="facebook"></a>
+            <a href="https://www.linkedin.com/in/amal-rahman-duya-897a59136/" target="_blank"><img src="./linkedin.png" alt="linkedin"></a>
+            <a href="https://wa.me/081273761982" target="_blank"><img src="./whatsapp.png" alt="whatsapp"></a>
+        </div>
+    </footer>
+    <script>
+        function updateCopyright() {
+            const copyrightElement = document.getElementById('copyright');
+
+            const currentYear = new Date().getFullYear();
+            const currentMonth = new Date().toLocaleString(
+                "en-US", {
+                    month: "long"
+                }
+            );
+
+            copyrightElement.innerHTML = `&copy; August 2024 &nbsp; - &nbsp;${
+                currentMonth
+            } ${
+                currentYear
+            } | myResume | All Right Reserved | Amal Rahman Duya`;
+        }
+    </script>
+    <script>
+        document.addEventListener(
+            "DOMContentLoaded", function () {
+                updateCopyright();
+            }
+        );
+    </script>
+</body>
+</html>
